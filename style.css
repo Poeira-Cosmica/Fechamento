@@ -1,0 +1,67 @@
+body {
+  background-color: #000000;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+  margin: 0;
+
+  position: relative;
+  top: 50%;
+}
+
+.handshake {
+  height: 128px;
+  width: 128px;
+
+  padding: 12px;
+}
+
+.pcmsLogo, .bolsonaro {
+  height: 224px;
+  width: 398px;
+}
+
+.phrase {
+  font-family: 'Courier New', Courier, monospace;
+  color: #FFFFFF;
+}
+
+.href, .pcmsLogo {
+  text-decoration: underline solid #551a8b;
+  cursor: pointer;
+
+  color: #551a8b;
+}
+
+.href:hover {
+  text-decoration: underline solid #300558;
+  color: #300558;
+
+  transition: all 0.2s;
+}
+
+.href:active {
+  text-decoration: underline solid #fa6b34;
+  color: #fa6b34;
+
+  transition: all 0.05s;
+}
+
+.divPhrase {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+  margin: 0;
+  padding-top: 2px;
+}
