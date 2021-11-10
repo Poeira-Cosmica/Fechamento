@@ -1,10 +1,7 @@
 body {
   background: rgb(1,0,15);
   background: radial-gradient(circle, rgba(1,0,15,1) 0%, rgba(12,13,32,1) 74%, rgba(11,15,33,1) 87%, rgba(13,24,27,1) 100%);
-  display: flex;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
+  color: white;
 
   position: relative;
 
@@ -12,8 +9,6 @@ body {
 }
 
 .outer {
-  display: flex;
-  justify-content: center;
   width: 100%;
 }
 
@@ -141,11 +136,8 @@ body {
   flex-direction: row;
   justify-content: center;
 
-  position: absolute;
-
-  bottom: 42px;
-
   margin: auto;
+  margin-top: 20%;
 
   opacity: 0;
 
@@ -167,9 +159,52 @@ body {
 }
 
 .phrase {
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.15em;
   text-align: center;
   color: #FFFFFF;
+}
+
+.phrase, .memes {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.memes {
+    margin-top: 10%;
+}
+
+.memes h2 {
+    font-weight: normal;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.memes .content {
+    width: 85%;
+    margin: auto;
+    margin-top: 8%;
+}
+
+.memes .content, .meme {
+    display: flex;
+}
+
+.meme .text {
+    margin-left: 20px;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.meme .text h3 {
+    margin: 0;
+    font-style: italic;
+}
+
+.meme .text p {
+    margin: 10px 0;
+}
+
+.meme video, .meme img {
+    border-radius: 10px;
 }
 
 @keyframes fadeIn {
