@@ -1,16 +1,30 @@
 body {
-  background-color: #000000;
+  background: rgb(1,0,15);
+  background: radial-gradient(circle, rgba(1,0,15,1) 0%, rgba(12,13,32,1) 74%, rgba(11,15,33,1) 87%, rgba(13,24,27,1) 100%);
   display: flex;
   margin: auto;
   align-items: center;
   justify-content: center;
+
+  position: relative;
+
+  padding: 64px 8px 128px 8px;
+}
+
+.outer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .images {
+  width: 100%;
+
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
+  gap: 12px;
 
   margin: 0;
 
@@ -23,16 +37,82 @@ body {
   width: 128px;
 
   padding: 12px;
+
+  opacity: 0;
+
+  animation: fadeIn 2s both;
+  animation-delay: 1.6s;
 }
 
-.pcmsLogo, .bolsonaro {
-  height: 224px;
-  width: 398px;
+.handshake img {
+  width: 100%;
+  height: 100%;
+
+  animation: moveForever 2s infinite alternate;
+  animation-delay: 3.6s;
 }
 
-.phrase {
-  font-family: 'Courier New', Courier, monospace;
+.bolsonaro, .pcmsLogo img {
+  width: 100%;
+  max-width: 398px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.bolsonaro {
+  opacity: 0;
+
+  animation: fadeIn 1.6s;
+  animation-delay: .8s;
+  animation-fill-mode: forwards;
+}
+
+.pcmsLogo {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  opacity: 0;
+
+  animation: fadeIn 1.6s;
+  animation-delay: .2s;
+  animation-fill-mode: forwards;
+}
+
+.pcmsLogo .hover {
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+
+  bottom: -101%;
+
+  transition: .3s;
+
+  backdrop-filter: blur(10px);
+  filter: opacity(0.6);
+  background-color: rgb(1,0,15);
+}
+
+.pcmsLogo .hover p {
+  margin: 0;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
   color: #FFFFFF;
+}
+
+.pcmsLogo:hover .hover {
+  bottom: -65%;
 }
 
 .href, .pcmsLogo {
@@ -58,10 +138,62 @@ body {
 
 .divPhrase {
   display: flex;
-  align-items: center;
   flex-direction: row;
   justify-content: center;
 
-  margin: 0;
-  padding-top: 2px;
+  position: absolute;
+
+  bottom: 42px;
+
+  margin: auto;
+
+  opacity: 0;
+
+  animation: fadeIn 1.6s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.divPhrase a {
+  color: #899EF6;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.divPhrase a:hover {
+  color: #899EF6;
+  filter: brightness(0.7);
+  text-decoration: none;
+}
+
+.phrase {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveForever {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(16px);
+  }
+}
+
+@media(max-width: 1032px) {
+  .images {
+    flex-direction: column;
+  }
 }
