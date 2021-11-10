@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico">
-  <link rel="shortcut icon" href="assets/handshake.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/img/handshake.png" type="image/x-icon">
 
   <title>Bolsonaro 🤝 Poeira Cósmica</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,15 +44,17 @@
       <img draggable="false" src="assets/img/bolsonaro.jpg" alt="bolsonaro" class="bolsonaro">
     </div>
     <div class=divPhrase>
-      <p class="phrase">Bolsonaro é fechamento com o
+      <p class="phrase">
+        Bolsonaro é fechamento com o
         <a class="href" href="https://poeiracosmica.com" target="_blank">
           Poeira Cósmica
         </a>
       </p>
     </div>
+    <audio id="music" src="assets/music.ogg" autoplay loop controls></audio>
   </div>
 
-  <div class="memes">
+  <div id="memes" class="memes">
       <h2>Memes brabos do Presidente da República</h2>
 
       <div class="content">
@@ -67,7 +69,10 @@
       </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    let mus = document.getElementById("music");
+    mus.volume = 0.6;
+  </script>
 </body>
 
 </html>
