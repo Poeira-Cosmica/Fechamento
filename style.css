@@ -179,18 +179,24 @@ body {
 }
 
 .memes .content {
+    display: block;
     width: 85%;
     margin: auto;
     margin-top: 8%;
 }
 
-.memes .content,
+.memes .right {
+    flex-direction: row-reverse;
+    text-align-last: right;
+}
+
 .meme {
     display: flex;
+    margin: 100px 0;
 }
 
 .meme .text {
-    margin-left: 20px;
+    margin: 0 20px;
     font-size: 1.5em;
     text-align: justify;
 }
@@ -206,6 +212,9 @@ body {
 
 .meme video,
 .meme img {
+    max-width: 480px;
+    max-height: 272px;
+
     border-radius: 10px;
 }
 
@@ -242,6 +251,10 @@ audio#music {
     .memes {
         justify-content: center;
     }
+    .memes .right {
+        flex-direction: row;
+        text-align-last: left;
+    }
     .memes .meme {
         flex-direction: column;
         gap: 16px;
@@ -250,5 +263,9 @@ audio#music {
     .memes .meme .text p,
     .memes .meme .text {
         margin: 0;
+    }
+    .memes .meme video,
+    .memes .meme img {
+        max-width: 100%;
     }
 }
