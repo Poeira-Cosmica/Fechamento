@@ -213,7 +213,7 @@ body {
 .meme video,
 .meme img {
     max-width: 480px;
-    max-height: 272px;
+    max-height: 375px;
 
     border-radius: 10px;
 }
