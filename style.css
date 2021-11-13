@@ -263,6 +263,7 @@ audio#music {
     .memes .meme .text p,
     .memes .meme .text {
         margin: 0;
+        text-align: left;
     }
     .memes .meme video,
     .memes .meme img {
